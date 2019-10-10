@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
+    <link href="css/style.css" rel="stylesheet">
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
   </head>
   <body>
-      <header>
-          <nav>
+      <header class="main-header">
+          <nav class="main-navigation">
+              <img src="img/logo.svg" width="139px" height="71px" alt="Логотип Седоны">
               <ul>
-                  <li>Информация</li>
-                  <li>Фото и видео</li>
-                  <li>Карта штата</li>
-                  <li>Гостиницы</li>
-                  <li><img src="img/logo.svg" width="139px" height="71px" alt="Логотип Седоны"></li>
+                  <a href="#"><li>Информация</li></a>
+                  <a href="#"><li>Фото и видео</li></a>
+                  <a href="#"><li>Карта штата</li></a>
+                  <a href="#"><li>Гостиницы</li></a>
               </ul>
           </nav>
       </header>
@@ -26,7 +27,7 @@
                     <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
                     <img src="img/advantage-1.jpg" width="800px" height="256px" alt="Фотография города Седона">
                 </div>
-                  <ul>
+                <ul class="offers">
                       <li>
                           <h3>Жильё</h3>
                           <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
@@ -39,15 +40,15 @@
                           <h3>Сувениры</h3>
                           <p>Не только китайского, но и местного производства</p>
                       </li>
-                  </ul>
-              </div>
-              <div class="advantage">
-              <div class="main-advantage">
+                </ul>
+                </div>
+                <div class="advantage">
+                <div class="main-advantage">
                   <h3>Там есть мост дьявола</h3>
                   <p>Да, по нему можно пройти, если конечно вы осмелитесь</p>
                   <img src="img/advantage-2.jpg" width="800px" height="256px" alt="Фотография мста дьявола в Седоне">
-              </div>
-                  <ul>
+                </div>
+                <ul class="description">
                       <li>
                           <h3>Небольшая площадь</h3>
                           <p>Все достопримечательности находятся очень близко</p>
@@ -60,19 +61,41 @@
                           <h3>Мало туристов</h3>
                           <p>Большинство едет в Гранд Каньон и толпится там</p>
                       </li>
-                  </ul>
-              </div>
+                </ul>
+                </div>
           </section>
-          <section>
+          <section class="booking">
               <h2>Заинтересовались?</h2>
               <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-              <!--------------ФОРМА--------------------->
+              <h3>Поиск гостиницы в Седоне</h3>
+              <form class="booking-form" action="https://echo.htmlacademy.ru" method="post">
+                  <p>
+                    <label for="arrival">Дата поездки</label>
+                    <input type="date" name="arrival-date" id="arrival" value="" placeholder="24 апреля 2017">
+                  </p>                  
+                  <p>
+                    <label for="leave">Дата поездки</label>
+                    <input type="date" name="leave-date" id="leave" value="" placeholder="4 июля 2017">
+                  </p>
+                  <p>
+                    <label for="adults">Взрослые</label>
+                    <input type="number" name="adults" id="adults"  value="" placeholder="2">
+                  </p>
+                  <p>
+                    <label for="children">Дети</label>
+                    <input type="number" name="children" id="children" value="" placeholder="0">
+                  </p>
+                  <p>
+                    <input type="submit" id="search" value="Найти">
+                  </p>
+              </form>
           </section>
           <section class="map">
+              <h2 class="visually-hidden">Как добраться</h2>
               <img src="img/map.png" width="1200px" height="593px" alt="Седона на карте">
           </section>
           </main>
-          <footer>
+          <footer class="main-footer">
               <p>#visitsedona</p>
               <div>
                 <p>Найдите нас в социальных сетях!</p>

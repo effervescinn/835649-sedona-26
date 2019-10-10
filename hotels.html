@@ -1,34 +1,74 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
+    <link href="css/style.css" rel="stylesheet">
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
   </head>
   <body>
-      <header>
-          <nav>
+      <header class="main-header">
+          <nav class="main-navigation">
+              <img src="img/logo.svg" width="139px" height="71px" alt="Логотип Седоны">
               <ul>
-                  <li>Информация</li>
-                  <li>Фото и видео</li>
-                  <li>Карта штата</li>
-                  <li>Гостиницы</li>
-                  <li><img src="img/logo.svg" width="139px" height="71px" alt="Логотип Седоны"></li>
+                  <li><a href="#">Информация</a></li>
+                  <li><a href="#">Фото и видео</a></li>
+                  <li><a href="#">Карта штата</a></li>
+                  <li><a href="#">Гостиницы</a></li>
               </ul>
           </nav>
       </header>
       
       <main>
-          <h1>Отели в Седоне</h1>
+          <h1 class="visually-hidden">Отели в Седоне</h1>
           <section>
-              <h2>Фильтр отелей</h2>
-              <!-------------------------ФОРМА------------------------->
+              <h2 class="visually-hidden">Фильтр отелей</h2>
+              <form class="filter" action="https://echo.htmlacademy.ru" method="post">
+                  <fieldset>
+                    <legend>Инфраструктура</legend>
+                      <ul>
+                        <li>
+                            <input type="radio" name="infrostructure" id="swimming-pool" checked>
+                            <label for="swimming-pool">Бассейн</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="infrostructure" id="parking"> 
+                            <label for="parking">Парковка</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="infrostructure" id="wi-fi"> 
+                            <label for="wi-fi">Wi-Fi</label>
+                        </li>
+                       </ul>
+                  </fieldset>
+                  <fieldset>
+                    <legend>Тип жилья</legend>
+                      <ul>
+                        <li>
+                            <input type="checkbox" name="accomodation" id="inn" checked>
+                            <label for="inn">Гостиница</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="accomodation" id="motel" checked> 
+                            <label for="motel">Мотель</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="accomodation" id="apartment" checked> 
+                            <label for="apartment">Апартаменты</label>
+                        </li>
+                       </ul>
+                  </fieldset>
+                  <fieldset>
+                    <legend>Стоимость в сутки</legend>
+                    <input type="range" min="0" max="3500" step="500" multiple>
+                  </fieldset>
+              </form>
           </section>
           <section>
-              <h2>Список отелей</h2>
+              <h2 class="visually-hidden">Список отелей</h2>
               <ul>
                   <li>
                       <div>
-                          <a href="#">
+                          <a href="hotels-item.html">
                               <img src="img/amara.jpg" width="135" height="90" alt="Фотография отеля Amara resort & spa">
                           </a>
                       </div>
@@ -45,7 +85,7 @@
                   </li>
                   <li>
                       <div>
-                          <a href="#">
+                          <a href="hotels-item.html">
                               <img src="img/desert.jpg" width="135" height="90" alt="Фотография отеля Desert quail inn">
                           </a>
                       </div>
@@ -62,7 +102,7 @@
                   </li>
                   <li>
                       <div>
-                          <a href="#">
+                          <a href="hotels-item.html">
                               <img src="img/villas.jpg" width="135" height="90" alt="Фотография отеля Villas at poco diablo">
                           </a>
                       </div>
@@ -81,7 +121,7 @@
           </section>
       </main>
       
-      <footer>
+      <footer class="main-footer">
               <p>#visitsedona</p>
               <div>
                 <p>Найдите нас в социальных сетях!</p>

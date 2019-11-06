@@ -200,7 +200,7 @@ img {
 }
 .main-advantage p {
     margin: 0px;
-    padding: 0 48px;
+    padding: 0 49px;
     line-height: 21px;
     font-size: 14px;
     text-align: center;
@@ -305,8 +305,7 @@ img {
 
 .more-information h3 {
     margin: 0px;
-    padding: 0px;
-    padding-top: 46px;
+    padding: 46px 120px 0px;
     margin-bottom: 26px;
     line-height: 21px;
     font-size: 21px;
@@ -874,7 +873,7 @@ img {
 }
 
 .filter-checkbox:focus + label {
-    color: #81b3d2;
+    outline: auto;
 }
 
 .filter-checkbox:disabled + label:before {
@@ -1095,10 +1094,13 @@ img {
             text-decoration: underline dotted;
 }
 
-.hotel-sort input[type=radio]:active + label,
-.hotel-sort input[type=radio]:focus + label {
+.hotel-sort input[type=radio]:active + label {
     color: #000000;
     text-decoration: none;
+}
+
+.hotel-sort input[type=radio]:focus + label {
+    outline: auto;
 }
 
 .sort-buttons {
